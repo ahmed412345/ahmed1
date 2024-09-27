@@ -1,0 +1,318 @@
+@font-face {
+    font-family:color-dots;
+    src: url(../fonts/color-logo.ttf);
+}
+@font-face {
+    font-family:p;
+    src: url(../fonts/pargraph.ttf);
+}
+@font-face {
+    font-family:head1;
+    src: url(../fonts/head.ttf);
+}
+@font-face {
+    font-family:p2;
+    src: url(../fonts/Zain-Regular.ttf);
+}
+@font-face {
+    font-family:h;
+    src: url(../fonts/Zain-ExtraBold.ttf);
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --width:1;
+    --height:1;
+    --font:1;
+    --gap:1;
+    --padding:1;
+    --position:1;
+    --margin:1;
+    --logo:1;
+    --transiton:610px;
+}
+body{
+    direction: rtl;
+}
+header{
+    background: url(../images/background.jpg) center/cover no-repeat;
+    width:100%;
+    height: 100vh;
+    color: white;
+    display: flex;
+}
+nav{
+    background-color: #9b8365;
+    position: fixed;
+    width:calc(var(--width)* 100%);
+    height:calc(var(--height) * 50px);
+    padding: calc(var(--padding) * 10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+header .logo{
+    font-size: calc(var(--font) * 40px);
+    font-weight: bold;
+    font-family:color-dots;
+    animation: ahmed 1s linear both ;
+}
+header .logo img{
+    vertical-align: middle;
+    filter: brightness(30);
+    width:calc(var(--logo) * 100px);
+    
+}
+@keyframes ahmed {
+
+    0%{
+        transform: translate(calc(var(--transiton) - 100vw));
+        opacity:0;
+    }
+    100%{
+        transform: rotate(0);
+        transform: translate(0,0);
+        opacity:1;
+    }
+    
+}
+.menu{
+    list-style: none;
+    font-size: calc(var(--font) * 20px);
+    display: flex;
+    gap:calc(var(--gap) * 20px);
+}
+.menu li a:hover{
+    color: #1100ff;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.menu >li >a{
+    display: inline-block;
+    padding:calc(var(--padding) * 20px);
+}
+.plants{
+    border-radius: 10px;
+    padding:calc(var(--padding) * 5px) ;
+    list-style: none;
+    visibility: hidden;
+    flex-direction: column;    
+    gap: 5px;
+    background: #0000ff2f;
+    position: absolute;
+    top:calc(var(--position) * 55px);
+    transition: all .3s linear .3s;
+    opacity:0;
+}
+#mm{
+    display:flex;
+}
+#mm:hover .plants {
+   visibility: visible; 
+    opacity:1;
+}
+.plants li a{
+    display: inline-block;
+    padding:calc(var(--padding) * 20px);
+    background: #7ba0e669;
+    width:calc(var(--width) * 150px);
+}
+.plants li a:hover{
+    background-color:#165cdf69;
+    color: red;
+}
+.center{
+    display: flex;
+    flex-flow: wrap column;
+    align-items: center;
+    margin: auto;
+
+}
+.center h1{
+    font-family:head1;
+    font-size:calc(var(--font) * 50px);
+    margin-bottom:calc(var(--margin) * 30px);
+}
+.center p{
+    padding:calc(var(--padding) * 30px) ;
+    margin:calc(var(--margin) * 10px) ;
+    font-size:calc(var(--font) * 30px);
+    font-family:p;
+    line-height:1.6;
+    text-align: center;
+}
+
+section{
+    display: flex;
+    justify-content: space-between;
+    padding: calc(var(--padding) * 10px);
+}
+section p{
+    color: rgb(0, 0, 0);
+    font-size:calc(var(--font) * 25px);
+    font-family:"p2";
+}
+section h2{
+    font-size:calc(var(--font) * 40px);
+    font-family:"h";
+    
+}
+section h3{
+    font-size:calc(var(--font) * 30px);
+    color: #125B9A;
+    font-family:"h";
+}
+
+section .left a{
+    background-color: #C7253E;
+    padding:calc(var(--padding) * 20px);
+    border-radius:5px;
+}
+section .left a:hover{
+    background-color: #8400ff86;
+}
+section .left{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+#sun {
+    background-image: linear-gradient(#FABC3F ,#E85C0D);
+}
+#sun .right h2{
+    color: #f32b2b;
+}
+#mercury{
+    background-image:linear-gradient(#fa9c5e,#f56150);
+}
+#mercury .right h2{
+    color: #ff003c;
+}
+#venus{
+    background-image:linear-gradient(#ffbc90,#ff9286);
+}
+#venus .right h2{
+    color: #c57789;
+}
+#earth{
+    background-image:linear-gradient(#5ead62,#308815);
+}
+#earth .right h2{
+    color: green;
+}
+#mars{
+    background-image:linear-gradient(#9e943a,#b2c50a);
+}
+#mars .right h2{
+    color: rgb(88, 72, 0);
+}
+#jupiter{
+    background-image:linear-gradient(#b4a621,#c2b71b);
+}
+#jupiter .right h2{
+    color: #d15401;
+}
+#saturn{
+    background-image:linear-gradient(#df7ed0,#9984a5);
+}
+#saturn .right h2{
+    color: rgb(209, 84, 1);
+}
+#uranus{
+    background-image:linear-gradient(#49a89c,#4d78a8);
+}
+#uranus .right h2{
+    color: rgb(209, 84, 1);
+}
+#neptune{
+    background-image:linear-gradient(#0756af,#00acf0);
+}
+#neptune .right h2{
+    color: #1db67b;
+}
+footer{
+    text-align: center;
+    background-image:linear-gradient(to right ,#e7dede , #575252 ,#e7dede);
+}
+footer ul{
+    display: flex;
+    justify-content: center;
+    gap:30px;
+    list-style:none;
+    padding: 10px;
+}
+footer ul li i{
+    padding: 10px;
+}
+footer ul li:hover{
+    background-color: #8f8989;
+}
+footer .bottom .logo{
+    font-family:color-dots;
+    font-weight: bold;
+    color: white;
+    font-size:40px;
+}
+
+@media screen and (max-width:400px) {
+    :root{
+        --width:1;
+        --height:calc(1/2);
+        --font:calc(1/2);
+        --gap:calc(1/2);
+        --padding:calc(1/2);
+        --position:calc(1/2);
+        --margin:calc(1/2); 
+        --logo:calc(1/3);
+        
+    }
+    img:not([alt="logo"]){
+        width: 200px;
+    }
+    header .logo{
+        animation: ahmed;
+    }
+    
+    section{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media screen and (min-width:401px)and (max-width:600px) {
+    :root{
+        --width:1;
+        --height:calc(1/2);
+        --font:calc(1/2);
+        --gap:calc(1/2);
+        --padding:calc(1/2);
+        --position:calc(1/2);
+        --margin:calc(1/4); 
+        --logo:calc(1/3);
+        --transiton:320px
+    }
+    img{
+        width: 200px;
+    }
+}
+@media screen and (min-width:601px) and (max-width:1000px) {
+    :root{
+        --width:1;
+        --height:calc(1/2);
+        --font:calc(1/1.5);
+        --gap:calc(1/2);
+        --padding:calc(1/2);
+        --position:calc(1/2);
+        --margin:calc(1/2); 
+        --logo:calc(1/2);
+        --transiton:400px
+    }
+    img{
+        width: 300px;
+    }
+}
