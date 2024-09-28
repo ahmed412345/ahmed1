@@ -141,7 +141,7 @@ a{
     padding:calc(var(--padding) * 30px) ;
     margin:calc(var(--margin) * 10px) ;
     font-size:calc(var(--font) * 30px);
-    font-family:p;
+    font-family:p2;
     line-height:1.6;
     text-align: center;
 }
